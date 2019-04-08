@@ -19,8 +19,8 @@ SI_soql_url = pd.read_json(SI_soql_url)
     
     
 @app.route('/species/<string:name>')
-def return_species(name):
-    df1 = SI_soql_url[SI_soql_url['health'] == name]
+def return_health(hp):
+    df1 = SI_soql_url[SI_soql_url['health'] == hp]
     return jsonify(df1)
 
 
